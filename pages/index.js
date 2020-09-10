@@ -1,12 +1,11 @@
 import Layout from "../components/layout";
+import Landing from "./index/landing";
 
 function IndexPage() {
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center">
-        <p>Imagine if we had content here</p>
-        <h1>HAH</h1>
-        <p>rediculouse</p>
+      <div className="flex flex-col items-center justify-center min-h-full">
+        <Landing />
       </div>
     </Layout>
   );
