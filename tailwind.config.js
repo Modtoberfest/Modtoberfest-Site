@@ -2,6 +2,20 @@ module.exports = {
   purge: ["./components/**/*.js", "./pages/**/*.js"],
   theme: {
     extend: {
+      colors: {
+        "accent-red": {
+          100: "#bb6666",
+          200: "#b04d4d",
+          300: "#a53333",
+          400: "#991a1a",
+          500: "#8e0000",
+          600: "#800000",
+          700: "#720000",
+          800: "#630000",
+          900: "#550000",
+          default: "#8e0000",
+        },
+      },
       fontFamily: {
         sans: [
           "Montserrat",

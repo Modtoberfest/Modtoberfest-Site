@@ -15,14 +15,14 @@ export default function NavBar() {
     : null;
 
   return (
-    <nav className="flex items-center justify-between flex-wrap p-6 bg-gradient-to-b from-teal-700 to-teal-900">
+    <nav className="flex items-center justify-between flex-wrap p-5 bg-gradient-to-b from-teal-700 to-teal-900">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
-        <img
+        {/* <img
           src="/site-logo.svg"
           alt="The modtoberfest logo."
           className="w-8 h-8 mr-2"
-        />
-        <a className="font-semibold text-xl tracking-tight">Modtoberfest</a>
+        /> */}
+        <a className="font-brand text-xl tracking-wide">Modtoberfest</a>
       </div>
 
       <div className="block lg:hidden">
