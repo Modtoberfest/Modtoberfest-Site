@@ -28,7 +28,7 @@ export default function PreEventLanding() {
         <div className="mb-12">
           <Countdown date={date} renderer={renderer} daysInHours={true} />
         </div>
-        <a href="https://discord.gg/gNJwUpB" target="_blank">
+        <a href="https://discord.modtoberfest.com/" target="_blank">
           <button className="font-brand bg-accent-red hover:bg-accent-red-700 py-4 px-8 rounded-full text-xl">
             Join our Discord!
           </button>
