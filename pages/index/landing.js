@@ -1,6 +1,16 @@
 import React from "react";
+import PreEventLanding from "./PreEventLanding";
+import PostEventLanding from "./PostEventLanding";
 
-export default function Landing() {
+export default function Landing({ stage }) {
+  if (stage == "pre") {
+    return <PreEventLanding />;
+  }
+
+  if (stage == "post") {
+    return <PostEventLanding />;
+  }
+
   return (
     <div className="flex flex-col items-center">
       <img src="/logo.png" alt="logo" className="mb-12" width="300px" />
@@ -8,7 +18,7 @@ export default function Landing() {
         <h1 className="mb-12 font-brand">
           Support the open source Minecraft&trade; modding community
           <br />
-          <span className="text-teal-200 font-bold">
+          <span className="text-teal-300 font-bold">
             Get exclusive stickers!
           </span>
         </h1>
