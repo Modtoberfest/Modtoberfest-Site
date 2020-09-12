@@ -21,7 +21,7 @@ export default function PreEventLanding() {
       <img src="/logo.png" alt="logo" className="mb-12" width="300px" />
       <div className="text-center">
         <h1 className="mb-12 font-brand">
-          Get ready.
+          Insert engaging text here to hype the event
           <br />
           <span className="text-teal-300 font-bold">October 1st 2020</span>
         </h1>

@@ -1,14 +1,14 @@
 import React from "react";
-import PreEventLanding from "./PreEventLanding";
-import PostEventLanding from "./PostEventLanding";
+import PreEvent from "./PreEvent";
+import PostEvent from "./PostEvent";
 
-export default function Landing({ stage }) {
+export default function MainSection({ stage }) {
   if (stage == "pre") {
-    return <PreEventLanding />;
+    return <PreEvent />;
   }
 
   if (stage == "post") {
-    return <PostEventLanding />;
+    return <PostEvent />;
   }
 
   return (
