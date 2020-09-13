@@ -26,6 +26,7 @@
   "homepage": "https://github.com/taylorbryant/next-starter-tailwind#readme",
   "dependencies": {
     "classnames": "^2.2.6",
+    "knex": "^0.21.5",
     "next": "9.5.2",
     "next-auth": "^3.1.0",
     "pg": "^8.3.3",

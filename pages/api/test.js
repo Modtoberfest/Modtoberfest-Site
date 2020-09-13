@@ -1,15 +1,10 @@
-import sequelize from "../../lib/database";
-// const Participant = require("../../models/Participant");
-import Participant from "../../models/Participant";
+const knex = require("../../lib/knex");
 
 export default async (req, res) => {
-  res.statusCode = 200;
-  console.log(Participant);
-  const jane = await Participant.create({
-    firstName: "Jane",
-    lastName: "Doe",
-  });
+  const accounts = await knex.from("accounts").select("*");
+  console.log(accounts);
 
+  res.statusCode = 200;
   res.setHeader("Content-Type", "application/json");
-  res.end(JSON.stringify({ jane }));
+  res.end(JSON.stringify({ name: "John Doe" }));
 };
