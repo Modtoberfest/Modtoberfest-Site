@@ -5,7 +5,7 @@
  * mid -> Event is ongoing
  * post -> Event is over
  */
-export function getEventStage() {
+export function getEventStage(): string {
   const currentDate = new Date();
 
   // Months are 0 indexed but that's kinda... yeah

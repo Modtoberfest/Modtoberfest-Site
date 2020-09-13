@@ -28,8 +28,8 @@ export default function NavUser() {
           <a className={classNames(classes, "flex items-center")}>
             <img
               src={session.user.image}
-              width="40"
-              className="rounded-full mr-2"
+              width="30"
+              className="rounded-full mr-3"
             />
             <div>My progress</div>
           </a>
@@ -42,7 +42,7 @@ export default function NavUser() {
         href={`/api/auth/signin`}
         onClick={(e) => {
           e.preventDefault();
-          signin();
+          signin("github");
         }}
         className={classes}
       >
