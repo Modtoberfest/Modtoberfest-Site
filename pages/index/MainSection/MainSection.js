@@ -26,7 +26,8 @@ export default function MainSection() {
           </span>
         </h1>
         <button className="font-brand bg-accent-red hover:bg-accent-red-700 py-4 px-8 rounded-full text-xl">
-          Start modding!
+          Start modding! TODO: make this button like the navbar login/my
+          progress button
         </button>
       </div>
     </div>

@@ -5,15 +5,6 @@ import NavUser from "./NavUser";
 export default function NavBar() {
   const [isExpanded, setExpanded] = useState(false);
 
-  // This will have to be fetched from some state
-  // this is just a mock up
-  const isLoggedIn = Math.random() < 0.5;
-  const user = isLoggedIn
-    ? {
-        imageUrl: "monky.jpg",
-      }
-    : null;
-
   return (
     <nav className="flex items-center justify-between flex-wrap p-5 bg-gradient-to-b from-teal-700 to-teal-900">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
@@ -22,7 +13,11 @@ export default function NavBar() {
           alt="The modtoberfest logo."
           className="w-8 h-8 mr-2"
         /> */}
-        <a className="font-brand text-xl tracking-wide">Modtoberfest</a>
+        <Link href="/">
+          <a className="font-brand text-xl tracking-wide no-underline">
+            Modtoberfest
+          </a>
+        </Link>
       </div>
 
       <div className="block lg:hidden">
@@ -49,17 +44,23 @@ export default function NavBar() {
         } flex-grow lg:flex lg:items-center lg:w-auto`}
       >
         <div className="text-sm lg:flex-grow flex flex-row-reverse items-center">
-          <NavUser profile={user} />
+          <NavUser />
 
           <Link href="/faq">
-            <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+            <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 no-underline">
               FaQ
             </a>
           </Link>
 
           <Link href="/about">
-            <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+            <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 no-underline">
               About
+            </a>
+          </Link>
+
+          <Link href="/">
+            <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 no-underline">
+              Home
             </a>
           </Link>
         </div>
