@@ -32,10 +32,7 @@
     "pg-hstore": "^2.3.3",
     "react": "16.13.1",
     "react-countdown": "^2.2.1",
-    "react-dom": "16.13.1",
-    "sequelize": "^6.3.5",
-    "sequelize-cli": "^6.2.0",
-    "sqlite3": "^5.0.0"
+    "react-dom": "16.13.1"
   },
   "devDependencies": {
     "@types/react": "^16.9.49",
