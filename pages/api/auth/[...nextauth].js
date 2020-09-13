@@ -9,7 +9,9 @@ const options = {
       scope: ["read:user"],
     }),
   ],
-
+  pages: {
+    newUser: "/new",
+  },
   database: {
     type: "postgres",
     database: process.env.DB_NAME,

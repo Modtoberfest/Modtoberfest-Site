@@ -1,8 +1,11 @@
 import React from "react";
 import PreEvent from "./PreEvent";
 import PostEvent from "./PostEvent";
+import { getEventStage } from "../../../lib/stage";
 
-export default function MainSection({ stage }) {
+export default function MainSection() {
+  const stage = getEventStage();
+
   if (stage == "pre") {
     return <PreEvent />;
   }
