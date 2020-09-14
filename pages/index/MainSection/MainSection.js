@@ -1,10 +1,15 @@
 import React from "react";
 import PreEvent from "./PreEvent";
 import PostEvent from "./PostEvent";
+import Link from "next/link";
 import { getEventStage } from "../../../lib/stage";
+import Button from "../../../components/shared/Button";
+import { useSession } from "next-auth/client";
+import LoginLink from "../../../components/LoginLink";
 
 export default function MainSection() {
   const stage = getEventStage();
+  const [session] = useSession();
 
   if (stage == "pre") {
     return <PreEvent />;
@@ -15,21 +20,24 @@ export default function MainSection() {
   }
 
   return (
-    <div className="flex flex-col items-center">
-      <img src="/logo.png" alt="logo" className="mb-12" width="300px" />
-      <div className="text-center">
-        <h1 className="mb-12 font-brand">
+    <>
+      <div className="flex flex-col items-center text-center">
+        <img src="/logo.png" alt="logo" className="mb-12" width="300px" />
+        <h1 className="mb-8 font-brand">
           Support the open source Minecraft&trade; modding community
           <br />
           <span className="text-teal-300 font-bold">
             Get exclusive stickers!
           </span>
         </h1>
-        <button className="font-brand bg-accent-red hover:bg-accent-red-700 py-4 px-8 rounded-full text-xl">
-          Start modding! TODO: make this button like the navbar login/my
-          progress button
-        </button>
+        <Button size="xl">
+          {session ? (
+            <Link href="/progress">My Progress</Link>
+          ) : (
+            <LoginLink>Get started!</LoginLink>
+          )}
+        </Button>
       </div>
-    </div>
+    </>
   );
 }

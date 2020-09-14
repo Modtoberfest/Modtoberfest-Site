@@ -6,17 +6,10 @@ export default function NavBar() {
   const [isExpanded, setExpanded] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between flex-wrap p-5 bg-gradient-to-b from-teal-700 to-teal-900">
+    <nav>
       <div className="flex items-center flex-shrink-0 text-white mr-6">
-        {/* <img
-          src="/site-logo.svg"
-          alt="The modtoberfest logo."
-          className="w-8 h-8 mr-2"
-        /> */}
         <Link href="/">
-          <a className="font-brand text-xl tracking-wide no-underline">
-            Modtoberfest
-          </a>
+          <a className="font-brand text-xl tracking-wide">Modtoberfest</a>
         </Link>
       </div>
 
@@ -47,19 +40,19 @@ export default function NavBar() {
           <NavUser />
 
           <Link href="/faq">
-            <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 no-underline">
-              FaQ
+            <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+              FAQ
             </a>
           </Link>
 
           <Link href="/about">
-            <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 no-underline">
+            <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
               About
             </a>
           </Link>
 
           <Link href="/">
-            <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 no-underline">
+            <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
               Home
             </a>
           </Link>

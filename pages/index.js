@@ -1,12 +1,12 @@
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
+import Details from "./index/Details";
 import MainSection from "./index/MainSection";
 
 function IndexPage() {
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center min-h-full">
-        <MainSection />
-      </div>
+      <MainSection />
+      <Details className="mt-8" />
     </Layout>
   );
 }
