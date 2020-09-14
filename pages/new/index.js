@@ -1,7 +1,7 @@
 import { getSession, useSession } from "next-auth/client";
 import Link from "next/link";
 import React from "react";
-import Layout from "../../components/layout";
+import Layout from "../../components/Layout";
 import { getAccountFromSession } from "../../lib/user";
 import knex from "../../lib/knex";
 

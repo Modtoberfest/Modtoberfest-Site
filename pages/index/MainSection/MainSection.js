@@ -32,9 +32,9 @@ export default function MainSection() {
         </h1>
         <Button size="xl">
           {session ? (
-            <Link href="/progress">My Progress</Link>
+            <Link href="/progress">My progress</Link>
           ) : (
-            <LoginLink>Get started!</LoginLink>
+            <LoginLink>Login with Github to get started!</LoginLink>
           )}
         </Button>
       </div>
