@@ -8,6 +8,7 @@ export default function Progress() {
   const stage = getEventStage();
   const [session] = useSession();
   const { user } = session;
+
   return (
     <Layout>
       <PageTitle>
@@ -23,4 +24,8 @@ export default function Progress() {
       </div>
     </Layout>
   );
+}
+
+export async function getServerSideProps() {
+  return { props: {} };
 }
