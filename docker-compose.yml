@@ -6,6 +6,7 @@ services:
     # !!! Make sure your file is there
     # Or simply provide the environment variables
     # directly in this file
+    network_mode: "host"
     env_file: .env
     ports:
       - 3000:3000

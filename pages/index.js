@@ -7,9 +7,9 @@ import WIP from "./index/WIP";
 function IndexPage() {
   const stage = getEventStage();
 
-  if (stage == "pre" && new Date().getUTCDay() + 1 < 21) {
-    return <WIP />;
-  }
+  // if (stage == "pre" && new Date().getUTCDay() + 1 < 21) {
+  //   return <WIP />;
+  // }
 
   return (
     <Layout>

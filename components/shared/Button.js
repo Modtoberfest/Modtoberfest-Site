@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 export default function Button({ children, className, size, ...buttonProps }) {
   const classes =
-    "mt-4 lg:mt-0 text-white font-bold bg-accent-red hover:bg-accent-red-600 px-4 py-2 rounded-full";
+    "mt-4 lg:mt-0 text-white font-bold bg-warm-orange hover:bg-warm-l-orange px-4 py-2 rounded-full transition duration-200 ease-in-out transform hover:scale-105";
   return (
     <button
       className={classNames(classes, className, {

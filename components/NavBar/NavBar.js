@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React, { useState } from "react";
+import NavLink from "./NavLink";
 import NavUser from "./NavUser";
 
 export default function NavBar() {
@@ -9,7 +10,9 @@ export default function NavBar() {
     <nav>
       <div className="flex items-center flex-shrink-0 text-white mr-6">
         <Link href="/">
-          <a className="font-brand text-xl tracking-wide">Modtoberfest</a>
+          <a>
+            <img src="/logo-trimmed.png" width="80px" />
+          </a>
         </Link>
       </div>
 
@@ -38,24 +41,9 @@ export default function NavBar() {
       >
         <div className="text-sm lg:flex-grow flex flex-row-reverse items-center">
           <NavUser />
-
-          <Link href="/faq">
-            <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-              FAQ
-            </a>
-          </Link>
-
-          <Link href="/about">
-            <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-              About
-            </a>
-          </Link>
-
-          <Link href="/">
-            <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-              Home
-            </a>
-          </Link>
+          <NavLink href="/faq">FAQ</NavLink>
+          <NavLink href="/about">About</NavLink>
+          <NavLink href="/">Home</NavLink>
         </div>
       </div>
     </nav>

@@ -13,11 +13,11 @@ h2 {
 }
 
 body {
-  background-image: linear-gradient(141deg, #3a6464 0%, #172a2a 85%);
+  @apply bg-teal-dark;
 }
 
 nav {
-  @apply flex items-center justify-between flex-wrap px-5 py-3 bg-gradient-to-b from-teal-700 to-teal-900;
+  @apply flex items-center justify-between flex-wrap px-5 py-3 bg-gradient-to-b from-teal-light to-teal-dark;
 }
 
 main {
