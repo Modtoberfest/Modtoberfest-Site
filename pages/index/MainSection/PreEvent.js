@@ -3,7 +3,7 @@ import Button from "../../../components/shared/Button";
 export default function PreEventLanding() {
   return (
     <div className="flex flex-col items-center">
-      <img src="/logo-half.png" alt="logo" className="mb-12" width="500px" />
+      <img src="/unknown.png" alt="logo" className="mb-12" width="500px" />
       <div className="text-center">
         <h1 className="mb-8 font-brand">
           Insert engaging text here to hype the event

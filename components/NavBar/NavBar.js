@@ -24,7 +24,7 @@ export default function NavBar() {
           }}
         >
           <svg
-            className="fill-current h-3 w-3"
+            className="fill-current h-3 w-3 text-white"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -42,6 +42,7 @@ export default function NavBar() {
         <div className="text-sm lg:flex-grow flex flex-row-reverse items-center">
           <NavUser />
           <NavLink href="/faq">FAQ</NavLink>
+          <NavLink href="/rules">Rules</NavLink>
           <NavLink href="/about">About</NavLink>
           <NavLink href="/">Home</NavLink>
         </div>

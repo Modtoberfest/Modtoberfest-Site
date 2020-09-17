@@ -23,3 +23,17 @@ nav {
 main {
   @apply text-gray-200 flex-1 w-full max-w-4xl p-4 mx-auto min-h-full;
 }
+
+.faq h2 {
+  @apply font-bold mt-4 mb-1;
+}
+
+.rules ol {
+  list-style-type: decimal;
+}
+
+.rules li {
+  display: list-item;
+  list-style-position: inside;
+  @apply my-2;
+}

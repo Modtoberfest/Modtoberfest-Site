@@ -4,6 +4,7 @@ import Link from "next/link";
 import { signin, signout, useSession } from "next-auth/client";
 import Button from "../shared/Button";
 import LoginLink from "../LoginLink";
+import NavLink from "./NavLink";
 
 export default function NavUser() {
   const [session] = useSession();
@@ -17,10 +18,9 @@ export default function NavUser() {
             e.preventDefault();
             signout();
           }}
+          className="text-white mr-3"
         >
-          <button className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-            Sign out
-          </button>
+          Sign out
         </a>
         <Link href="/progress">
           <a>
