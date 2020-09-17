@@ -14,7 +14,7 @@ function IndexPage() {
   return (
     <Layout>
       <MainSection />
-      <Details className="mt-8" />
+      <Details className="mt-4" />
     </Layout>
   );
 }

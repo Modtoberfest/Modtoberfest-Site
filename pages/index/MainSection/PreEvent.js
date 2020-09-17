@@ -5,11 +5,13 @@ export default function PreEventLanding() {
     <div className="flex flex-col items-center">
       <img src="/logo-half.png" alt="logo" className="mb-12" width="500px" />
       <div className="text-center">
-        <h1 className="mb-8 font-brand">
-          Insert engaging text here to hype the event
+        <h1 className="mb-4 font-brand">
+          Support the Open Source Minecraft modding community
           <br />
-          <span className="text-teal-300 font-bold text-warm-l-orange">
-            October 1st 2020
+          and get prizes!
+          <br />
+          <span className="font-bold text-warm-l-orange">
+            Starting October 1st 2020
           </span>
         </h1>
         <a href="https://discord.modtoberfest.com/" target="_blank">

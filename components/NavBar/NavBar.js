@@ -41,9 +41,9 @@ export default function NavBar() {
       >
         <div className="text-sm lg:flex-grow flex flex-row-reverse items-center">
           <NavUser />
+          <NavLink href="/contact">Contact</NavLink>
           <NavLink href="/faq">FAQ</NavLink>
           <NavLink href="/rules">Rules</NavLink>
-          <NavLink href="/about">About</NavLink>
           <NavLink href="/">Home</NavLink>
         </div>
       </div>
