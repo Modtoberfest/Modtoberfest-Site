@@ -11,7 +11,7 @@ export default function New() {
 
   if (!session) {
     return (
-      <Layout>
+      <Layout title="Sign in with Github" canonical="/new">
         <div className="text-center">
           <h1 className="font-brand">
             Please sign in with your Github account to complete the registration

@@ -6,7 +6,11 @@ import FAQItem from "./FAQItem";
 
 export default function FAQ() {
   return (
-    <Layout>
+    <Layout
+      title="FAQ"
+      description="Frequently asked question"
+      canonical="/faq"
+    >
       <PageTitle>Frequently Asked Questions</PageTitle>
       <p>
         See the{" "}

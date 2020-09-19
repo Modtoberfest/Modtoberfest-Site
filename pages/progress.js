@@ -16,7 +16,11 @@ export default function Progress() {
   const { user } = session;
 
   return (
-    <Layout>
+    <Layout
+      title="My Progress"
+      description="See the progress you made in the Modtoberfest challenge!"
+      canonical="/progress"
+    >
       <PageTitle>
         <div className="flex">
           <div className="flex-grow">Progress</div>

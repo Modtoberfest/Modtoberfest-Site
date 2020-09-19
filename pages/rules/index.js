@@ -5,7 +5,7 @@ import PageTitle from "../../components/shared/PageTitle";
 
 export default function Rules() {
   return (
-    <Layout>
+    <Layout title="Rules" description="Rules of the event" canonical="/rules">
       <PageTitle>Rules</PageTitle>
       <p>
         See the{" "}

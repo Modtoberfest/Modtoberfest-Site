@@ -5,9 +5,12 @@ import knex from "../../lib/knex";
 import Participant from "./Participant";
 
 export default function Participants({ sponsors }) {
-  console.log(sponsors);
   return (
-    <Layout>
+    <Layout
+      title="Sponsors"
+      description="Sponsors making this event possible"
+      canonical="/participants"
+    >
       <PageTitle>Sponsors</PageTitle>
       <p>Thank you to our sponsors for making this event possible!</p>
       <div className="flex flex-wrap">

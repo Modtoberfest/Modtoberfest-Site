@@ -4,7 +4,11 @@ import PageTitle from "../components/shared/PageTitle";
 
 export default function Contact() {
   return (
-    <Layout>
+    <Layout
+      title="Contact us"
+      description="Help, Questions and Inquiries"
+      canonical="/contact"
+    >
       <PageTitle>Contact</PageTitle>
       <h2 className="mb-2">Discord</h2>
       <p className="mb-2">For questions, support or any inquiry</p>

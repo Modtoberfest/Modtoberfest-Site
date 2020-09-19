@@ -12,7 +12,11 @@ function IndexPage() {
   // }
 
   return (
-    <Layout>
+    <Layout
+      title="Modtoberfest"
+      description="Support the Open Source Minecraft modding community and get prizes"
+      canonical="/"
+    >
       <MainSection />
       <Details className="mt-4" />
     </Layout>
