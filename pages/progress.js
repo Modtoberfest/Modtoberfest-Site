@@ -3,10 +3,16 @@ import { useSession } from "next-auth/client";
 import Layout from "../components/Layout";
 import { getEventStage } from "../lib/stage";
 import PageTitle from "../components/shared/PageTitle";
+import MustBeLoggedIn from "../components/MustBeLoggedIn";
 
 export default function Progress() {
   const stage = getEventStage();
   const [session] = useSession();
+
+  if (!session) {
+    return <MustBeLoggedIn />;
+  }
+
   const { user } = session;
 
   return (
