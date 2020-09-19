@@ -22,12 +22,12 @@ export default function MainSection() {
   return (
     <>
       <div className="flex flex-col items-center text-center">
-        <img src="/logo-half.png" alt="logo" className="mb-12" width="300px" />
-        <h1 className="mb-8 font-brand">
-          Support the open source Minecraft&trade; modding community
+        <img src="/logo-half.png" alt="logo" className="mb-6" width="500px" />
+        <h1 className="mb-4 font-brand">
+          Support the Open Source Minecraft modding community
           <br />
-          <span className="text-teal-300 font-bold">
-            Get exclusive stickers!
+          <span className="font-bold text-warm-l-orange">
+            and get exclusive stickers!
           </span>
         </h1>
         <Button size="xl">
