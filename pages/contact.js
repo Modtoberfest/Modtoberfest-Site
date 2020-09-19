@@ -10,7 +10,11 @@ export default function Contact() {
       <p className="mb-2">For questions, support or any inquiry</p>
       <p className="font-bold tracking-wider">
         Join our Discord at{" "}
-        <a className="underline" href="https://discord.modtoberfest.com">
+        <a
+          className="underline"
+          target="_blank"
+          href="https://discord.modtoberfest.com"
+        >
           https://discord.modtoberfest.com
         </a>
       </p>

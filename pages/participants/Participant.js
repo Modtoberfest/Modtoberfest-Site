@@ -15,14 +15,18 @@ export default function Participant({
         <p>{summary}</p>
         <div className="flex my-3">
           <img src="github-logo.png" width="25" height="25" className="mr-2" />
-          <a className="underline" href={`https://github.com/${githubUser}`}>
+          <a
+            className="underline"
+            href={`https://github.com/${githubUser}`}
+            target="_blank"
+          >
             {githubUser}
           </a>
         </div>
         {websiteUrl && (
           <div className="my-3 flex flex-no-wrap">
             <img src="hand-cursor.png" width="25" className="mr-2" />
-            <a className="underline" href={websiteUrl}>
+            <a className="underline" href={websiteUrl} target="_blank">
               {websiteUrl}
             </a>
           </div>
@@ -33,6 +37,7 @@ export default function Participant({
             <a
               className="underline"
               href={`https://twitter.com/${twitterHandle}`}
+              target="_blank"
             >
               {twitterHandle}
             </a>

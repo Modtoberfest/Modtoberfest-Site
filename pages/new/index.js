@@ -4,6 +4,7 @@ import React from "react";
 import Layout from "../../components/Layout";
 import { getAccountFromSession } from "../../lib/user";
 import knex from "../../lib/knex";
+import PageTitle from "../../components/shared/PageTitle";
 
 export default function New() {
   const [session, loading] = useSession();
@@ -12,7 +13,7 @@ export default function New() {
     return (
       <Layout>
         <div className="text-center">
-          <h1>
+          <h1 className="font-brand">
             Please sign in with your Github account to complete the registration
             process.
           </h1>
@@ -29,15 +30,42 @@ export default function New() {
   return (
     <Layout>
       <div className="text-xl text-center">
-        <h1 className="font-bold text-center">Welcome to Modtoberfest!</h1>
-        <p className="text-center">A couple things before you start</p>
-        <div className="mt-5 border-accent-red border-4 p-5">
-          <div>
-            Make sure you read the rules{" "}
-            <Link href="/faq">
-              <a>here</a>
-            </Link>
+        <PageTitle className="text-center">Welcome to Modtoberfest!</PageTitle>
+        <p className="text-center">
+          You're on! Here's some things to know about the event
+        </p>
+        <div className="my-5">
+          <ul>
+            <li>
+              - Read the{" "}
+              <Link href="/rules">
+                <a className="underline">rules</a>
+              </Link>
+            </li>
+            <li>
+              - Checkout the{" "}
+              <Link href="/faq">
+                <a className="underline">FAQ</a>
+              </Link>
+            </li>
+            <li>
+              - For questions, issues or just chatting, join us on{" "}
+              <a
+                className="underline"
+                target="_blank"
+                href="https://discord.modtoberfest.com"
+              >
+                Discord
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className="flex flex-wrap justify-center">
+          <div className="w-full pb-10">
+            <p>Get modding and have fun!</p>
+            <p className="text-sm">- the Modtoberfest team</p>
           </div>
+          <img src="logo-trimmed.png" width="300"></img>
         </div>
       </div>
     </Layout>

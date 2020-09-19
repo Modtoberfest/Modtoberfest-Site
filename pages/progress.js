@@ -12,8 +12,17 @@ export default function Progress() {
   return (
     <Layout>
       <PageTitle>
-        <img src={user.image} width="50" className="rounded-full mr-3 mb-2" />
-        {user.name}
+        <div className="flex">
+          <div className="flex-grow">Progress</div>
+          <div className="flex">
+            <img
+              src={user.image}
+              width="50"
+              className="rounded-full mr-3 mb-2"
+            />
+            {user.name}
+          </div>
+        </div>
       </PageTitle>
       <div>
         {stage == "pre" && (

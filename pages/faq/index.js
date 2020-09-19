@@ -51,6 +51,7 @@ export default function FAQ() {
           <a
             className="underline"
             href="https://www.canadapost.ca/tools/pg/manual/pgIntDest-e.asp?letter=A"
+            target="_blank"
           >
             here
           </a>
@@ -62,7 +63,11 @@ export default function FAQ() {
           The ability to add new projects is restricted to those who have
           directly sponsored the event in some capacity. If you would like to
           co-sponsor this event, reach out to Darkhax or an organizer in the{" "}
-          <a href="https://discord.modtoberfest.com" className="underline">
+          <a
+            href="https://discord.modtoberfest.com"
+            target="_blank"
+            className="underline"
+          >
             Discord server
           </a>
         </FAQItem>
