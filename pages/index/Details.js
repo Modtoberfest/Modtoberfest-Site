@@ -8,15 +8,16 @@ export default function Details({ className }) {
     <div className={classNames(className, "text-center")}>
       <h2 className={titleClasses}>What is modtoberfest?</h2>
       <p>
-        Short paragraph that explains what modtoberfest is. Keep it short. Keep
-        it simple and yeah.
+        Modtoberfest is a celebration of the open source Minecraft modding
+        community. During October 2020 we are challenging participants to create
+        quality pull requests for certain community projects.
       </p>
 
       <h2 className={titleClasses}>How do I participate?</h2>
       <p>
         Make 4 pull request to unique{" "}
         <Link href="/participants">
-          <a className="underline">participant repositories</a>
+          <a className="underline">Sponsors repositories</a>
         </Link>
       </p>
 
@@ -25,12 +26,16 @@ export default function Details({ className }) {
           <a className="underline">FAQ</a>
         </Link>{" "}
         -{" "}
-        <Link href="/about">
-          <a className="underline">About</a>
+        <Link href="/rules">
+          <a className="underline">Rules</a>
         </Link>{" "}
         -{" "}
+        <a className="underline" href="https://discord.modtoberfest.com">
+          Discord
+        </a>{" "}
+        -{" "}
         <Link href="/participants">
-          <a className="underline">Participants</a>
+          <a className="underline">Sponsors</a>
         </Link>
       </h2>
     </div>
