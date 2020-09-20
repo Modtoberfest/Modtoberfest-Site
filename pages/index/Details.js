@@ -17,7 +17,7 @@ export default function Details({ className }) {
       <p>
         Make 4 pull request to unique{" "}
         <Link href="/repositories">
-          <a className="underline">Sponsors repositories</a>
+          <a className="underline font-bold">Sponsors repositories</a>
         </Link>
       </p>
 
