@@ -35,7 +35,7 @@ export default function Participants({ sponsors }) {
 }
 
 export async function getServerSideProps(context) {
-  const sponsors = await knex("sponsor").select().orderBy("name", "asc");
+  const sponsors = await knex.table("sponsor").select().orderBy("name", "asc");
 
   return {
     props: { sponsors },
