@@ -4,14 +4,14 @@ import Link from "next/link";
 import { signin, signout, useSession } from "next-auth/client";
 import Button from "../shared/Button";
 import LoginLink from "../LoginLink";
-import NavLink from "./NavLink";
+import classNames from "classnames";
 
-export default function NavUser() {
+export default function NavUser({ className }) {
   const [session] = useSession();
 
   if (session) {
     return (
-      <div className="flex items-center">
+      <div className={classNames("flex items-center", className)}>
         <a
           href={`/api/auth/signout`}
           onClick={(e) => {

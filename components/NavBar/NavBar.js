@@ -39,12 +39,14 @@ export default function NavBar() {
           isExpanded ? "block" : "hidden"
         } flex-grow lg:flex lg:items-center lg:w-auto`}
       >
-        <div className="text-sm lg:flex-grow flex flex-row-reverse items-center">
-          <NavUser />
-          <NavLink href="/contact">Contact</NavLink>
+        <div className="text-sm lg:flex-grow flex items-center flex-wrap flex-grow">
+          <NavLink href="/">Home</NavLink>
           <NavLink href="/faq">FAQ</NavLink>
           <NavLink href="/rules">Rules</NavLink>
-          <NavLink href="/">Home</NavLink>
+          <NavLink href="/contact">Contact</NavLink>
+        </div>
+        <div>
+          <NavUser className="mt-4 lg:mt-0" />
         </div>
       </div>
     </nav>
