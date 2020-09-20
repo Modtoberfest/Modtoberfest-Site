@@ -38,7 +38,7 @@ export default function Layout({
       />
       <div className="flex flex-col min-h-screen h-full">
         <NavBar />
-        <main className={classNames("md:px-8 md:pt-10", className)}>
+        <main className={classNames("md:px-8 md:pt-1", className)}>
           {children}
         </main>
       </div>

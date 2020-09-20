@@ -44,6 +44,7 @@ export default function NavBar() {
           <NavLink href="/faq">FAQ</NavLink>
           <NavLink href="/rules">Rules</NavLink>
           <NavLink href="/contact">Contact</NavLink>
+          <NavLink href="/participants">Sponsors</NavLink>
         </div>
         <div>
           <NavUser className="mt-4 lg:mt-0" />
