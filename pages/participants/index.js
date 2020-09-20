@@ -10,9 +10,12 @@ export default function Participants({ sponsors }) {
       title="Sponsors"
       description="Sponsors making this event possible"
       canonical="/participants"
+      className="max-w-full"
     >
-      <PageTitle>Sponsors</PageTitle>
-      <p>Thank you to our sponsors for making this event possible!</p>
+      <PageTitle className="text-center">Sponsors</PageTitle>
+      <p className="text-center">
+        Thank you to our sponsors for making this event possible!
+      </p>
       <div className="flex flex-wrap">
         {sponsors.map((sponsor) => (
           <Participant
@@ -32,7 +35,7 @@ export default function Participants({ sponsors }) {
 }
 
 export async function getServerSideProps(context) {
-  const sponsors = await knex("sponsor").select();
+  const sponsors = await knex("sponsor").select().orderBy("name", "asc");
 
   return {
     props: { sponsors },

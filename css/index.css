@@ -37,7 +37,3 @@ main {
   list-style-position: inside;
   @apply my-2;
 }
-
-.sponsor-card {
-  min-height: 220px;
-}
