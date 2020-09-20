@@ -9,7 +9,7 @@ export default function Page404() {
       title="Page not found"
       description="The requested page does not exist"
     >
-      <img src="logo-half.png" width="400" className="mb-5" />
+      <img src="/logo/half-top.png" width="400" className="mb-5" />
       <div className="text-center">
         <h1 className="mb-5">404 - This page doesn't exist</h1>
         <Link href="/">

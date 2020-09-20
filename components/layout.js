@@ -26,7 +26,7 @@ export default function Layout({
           description: description,
           images: [
             {
-              url: image || "https://modtoberfest.com/logo-half.png",
+              url: image || "https://modtoberfest.com/logo/badge-bg-pad.png",
               alt: title + " logo",
             },
           ],

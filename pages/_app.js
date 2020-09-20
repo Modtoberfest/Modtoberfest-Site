@@ -18,7 +18,7 @@ function App({ Component, pageProps }) {
           description: "Celebrating the Minecraft open source community",
           images: [
             {
-              url: "https://modtoberfest.com/logo-half.png",
+              url: "https://modtoberfest.com/logo/badge-bg-pad.png",
               alt: "Modtoberfest logo",
             },
           ],
@@ -29,7 +29,7 @@ function App({ Component, pageProps }) {
         }}
       />
       <Head>
-        <link rel="icon" type="image/png" href="/logo-trimmed.png" />
+        <link rel="icon" type="image/png" href="/logo/badge.png" />
       </Head>
       <Component {...pageProps} />
     </Provider>

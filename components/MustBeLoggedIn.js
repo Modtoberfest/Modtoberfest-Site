@@ -9,7 +9,7 @@ export default function MustBeLoggedIn() {
       className="flex flex-col items-center justify-center"
       title="Login to continue"
     >
-      <img src="logo-half.png" width="400" className="mb-5" />
+      <img src="/logo/half-top.png" width="400" className="mb-5" />
       <div className="text-center">
         <h1 className="mb-5">You have to login to access this page</h1>
         <Button size="xl">

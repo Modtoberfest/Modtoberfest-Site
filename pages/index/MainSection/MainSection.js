@@ -22,7 +22,12 @@ export default function MainSection() {
   return (
     <>
       <div className="flex flex-col items-center text-center">
-        <img src="/logo-half.png" alt="logo" className="mb-6" width="500px" />
+        <img
+          src="/logo/half-top.png"
+          alt="logo"
+          className="mb-6"
+          width="500px"
+        />
         <h1 className="mb-4 font-brand">
           Support the Open Source Minecraft modding community
           <br />

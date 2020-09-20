@@ -16,7 +16,7 @@ export default function Details({ className }) {
       <h2 className={titleClasses}>How do I participate?</h2>
       <p>
         Make 4 pull request to unique{" "}
-        <Link href="/participants">
+        <Link href="/repositories">
           <a className="underline">Sponsors repositories</a>
         </Link>
       </p>
