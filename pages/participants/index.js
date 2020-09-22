@@ -28,6 +28,8 @@ export default function Participants({ sponsors }) {
             summary={sponsor.summary}
             twitterHandle={sponsor.twitter_handle}
             websiteUrl={sponsor.website_url}
+            subreddit={sponsor.subreddit}
+            discord={sponsor.discord}
           />
         ))}
       </div>

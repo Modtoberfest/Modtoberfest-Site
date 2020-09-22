@@ -2,10 +2,12 @@ import React from "react";
 export default function Participant({
   githubUser,
   id,
+  subreddit,
   imageUrl,
   name,
   summary,
   twitterHandle,
+  discord,
   websiteUrl,
 }) {
   return (
@@ -19,21 +21,43 @@ export default function Participant({
             {name}
           </h2>
           <p>{summary}</p>
-          <div className="flex my-3">
-            <img
-              src="/icons/github-logo-128.png"
-              width="25"
-              height="25"
-              className="mr-2"
-            />
-            <a
-              className="underline"
-              href={`https://github.com/${githubUser}`}
-              target="_blank"
-            >
-              {githubUser}
-            </a>
-          </div>
+          {discord && (
+            <div className="my-3 flex flex-no-wrap">
+              <img src="/icons/discord.png" width="25" className="mr-2" />
+              <a className="underline" href={discord} target="_blank">
+                {discord.replace(/(^\w+:|^)\/\//, "")}
+              </a>
+            </div>
+          )}
+          {githubUser && (
+            <div className="flex my-3">
+              <img
+                src="/icons/github-logo-128.png"
+                width="25"
+                height="25"
+                className="mr-2"
+              />
+              <a
+                className="underline"
+                href={`https://github.com/${githubUser}`}
+                target="_blank"
+              >
+                {githubUser}
+              </a>
+            </div>
+          )}
+          {subreddit && (
+            <div className="my-3 flex flex-no-wrap">
+              <img src="/icons/reddit.png" width="25" className="mr-2" />
+              <a
+                className="underline"
+                href={`https://reddit.com/r/${subreddit}`}
+                target="_blank"
+              >
+                r/{subreddit}
+              </a>
+            </div>
+          )}
           {websiteUrl && (
             <div className="my-3 flex flex-no-wrap">
               <img src="/icons/globe-128.png" width="25" className="mr-2" />
