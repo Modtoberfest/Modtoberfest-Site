@@ -21,7 +21,7 @@ export default function Participant({
           <p>{summary}</p>
           <div className="flex my-3">
             <img
-              src="/icons/github-logo.png"
+              src="/icons/github-logo-128.png"
               width="25"
               height="25"
               className="mr-2"
@@ -36,7 +36,7 @@ export default function Participant({
           </div>
           {websiteUrl && (
             <div className="my-3 flex flex-no-wrap">
-              <img src="/icons/hand-cursor.png" width="25" className="mr-2" />
+              <img src="/icons/globe-128.png" width="25" className="mr-2" />
               <a className="underline" href={websiteUrl} target="_blank">
                 {websiteUrl}
               </a>
@@ -44,7 +44,11 @@ export default function Participant({
           )}
           {twitterHandle && (
             <div className="flex flex-no-wrap my-3">
-              <img src="/icons/twitter-logo.png" width="25" className="mr-2" />
+              <img
+                src="/icons/twitter-logo-128.png"
+                width="25"
+                className="mr-2"
+              />
               <a
                 className="underline"
                 href={`https://twitter.com/${twitterHandle}`}
