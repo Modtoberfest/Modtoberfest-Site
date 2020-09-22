@@ -5,6 +5,7 @@ import Layout from "../../components/Layout";
 import { getAccountFromSession } from "../../lib/user";
 import knex from "../../lib/knex";
 import PageTitle from "../../components/shared/PageTitle";
+import { info } from "../../lib/discord-notifier";
 
 export default function New() {
   const [session, loading] = useSession();
@@ -101,6 +102,21 @@ export async function getServerSideProps(context) {
       admin: false,
       github_id: account.github_id,
     });
+
+    await info("New user signed up", null, [
+      {
+        name: "Name",
+        value: account.name,
+      },
+      {
+        name: "GH ID",
+        value: account.github_id,
+      },
+      {
+        name: "UUID",
+        value: account.id,
+      },
+    ]);
   } catch (e) {
     console.error(e);
   }
