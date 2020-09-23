@@ -13,7 +13,7 @@ export default function Tips() {
       <PageTitle>Tips</PageTitle>
       <div className="faq">
 
-        <TipEntry title="How do I make a Pull Request?">
+      <TipEntry title="How do I make a Pull Request?">
           The first step in making a Pull Request is to fork the target project
           on GitHub. Then you can edit files in the browser or clone your fork
           and make the changes locally. Once the changes are done push them to
@@ -29,14 +29,14 @@ export default function Tips() {
         </TipEntry>
 
         <TipEntry title="How can non-coders participate?">
-          If you speak a non-english language then translating mods to other
+          If you speak a non-English language then translating mods to other
           languages is a great way to participate in the challenge. Minecraft
           also has support for joke languages like "pirate speak" that anyone
-          can translate to with enough creativity. Remembr to excercise caution
+          can translate to with enough creativity. Remember to exercise caution
           when translating to joke languages as they can easily become spam.
           <br/><br/>
           If you are an artist you can look into improving the textures or 
-          even creating new textures for upcomming features. It's good etiquette
+          even creating new textures for upcoming features. It's good etiquette
           to reach out to the project maintainer before doing this as they may
           not want their textures to be remade. Communication is key.
         </TipEntry>
