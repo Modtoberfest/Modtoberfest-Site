@@ -23,7 +23,9 @@ export default function Participant({
           <p>{summary}</p>
           {discord && (
             <div className="my-3 flex flex-no-wrap">
-              <img src="/icons/discord.png" width="25" className="mr-2" />
+              <div>
+                <img src="/icons/discord.png" width="25" className="mr-2" />
+              </div>
               <a className="underline" href={discord} target="_blank">
                 {discord.replace(/(^\w+:|^)\/\//, "")}
               </a>
@@ -31,14 +33,16 @@ export default function Participant({
           )}
           {githubUser && (
             <div className="flex my-3">
-              <img
-                src="/icons/github-logo-128.png"
-                width="25"
-                height="25"
-                className="mr-2"
-              />
+              <div>
+                <img
+                  src="/icons/github-logo-128.png"
+                  width="25"
+                  className="mr-2"
+                />
+              </div>
               <a
                 className="underline"
+                style={{ overflowWrap: "anywhere" }}
                 href={`https://github.com/${githubUser}`}
                 target="_blank"
               >
@@ -48,7 +52,9 @@ export default function Participant({
           )}
           {subreddit && (
             <div className="my-3 flex flex-no-wrap">
-              <img src="/icons/reddit.png" width="25" className="mr-2" />
+              <div>
+                <img src="/icons/reddit.png" width="25" className="mr-2" />
+              </div>
               <a
                 className="underline"
                 href={`https://reddit.com/r/${subreddit}`}
@@ -60,7 +66,9 @@ export default function Participant({
           )}
           {websiteUrl && (
             <div className="my-3 flex flex-no-wrap">
-              <img src="/icons/globe-128.png" width="25" className="mr-2" />
+              <div>
+                <img src="/icons/globe-128.png" width="25" className="mr-2" />
+              </div>
               <a className="underline" href={websiteUrl} target="_blank">
                 {websiteUrl}
               </a>
@@ -68,11 +76,13 @@ export default function Participant({
           )}
           {twitterHandle && (
             <div className="flex flex-no-wrap my-3">
-              <img
-                src="/icons/twitter-logo-128.png"
-                width="25"
-                className="mr-2"
-              />
+              <div>
+                <img
+                  src="/icons/twitter-logo-128.png"
+                  width="25"
+                  className="mr-2"
+                />
+              </div>
               <a
                 className="underline"
                 href={`https://twitter.com/${twitterHandle}`}

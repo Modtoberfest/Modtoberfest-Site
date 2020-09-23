@@ -37,3 +37,7 @@ main {
   list-style-position: inside;
   @apply my-2;
 }
+
+a {
+  overflow-wrap: anywhere;
+}
