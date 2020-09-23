@@ -20,7 +20,7 @@ export default function FAQ() {
         </Link>
       </p>
       <div className="faq">
-        <FAQItem title="What is Modtoberfest?">
+      <FAQItem title="What is Modtoberfest?">
           Modtoberfest is a celebration of Open Source in the Minecraft
           community. During October we are challenging members of our
           community to contribute to various community projects by submitting
@@ -77,7 +77,7 @@ export default function FAQ() {
             UTC
           </a> for the event. All pull request data is taken from
           GitHub's API which also uses UTC. Please keep in mind that time is
-          tricky and some discrepencies may occur. 
+          tricky and some discrepancies may occur. 
         </FAQItem>
         <FAQItem title = "How are pull requests tracked?">
           We are tracking all pull requests created on participating projects
