@@ -23,9 +23,8 @@ export default function Rules() {
             projects list count towards your progress in the challenge.
           </li>
           <li>
-            You must submit a pull request to four{" "}
-            <span className="underline">different</span> repositories managed by{" "}
-            <span className="underline">different</span> groups/organizations.
+            You must submit pull requests to four{" "}
+            <span className="underline">different</span> repositories.
           </li>
           <li>Pull requests must meet our quality standards.</li>
           <li>
