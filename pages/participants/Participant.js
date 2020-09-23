@@ -1,4 +1,6 @@
 import React from "react";
+import { removeProtocol } from "../../common/format";
+
 export default function Participant({
   githubUser,
   id,
@@ -27,7 +29,7 @@ export default function Participant({
                 <img src="/icons/discord.png" width="25" className="mr-2" />
               </div>
               <a className="underline" href={discord} target="_blank">
-                {discord.replace(/(^\w+:|^)\/\//, "")}
+                {removeProtocol(discord)}
               </a>
             </div>
           )}
@@ -70,7 +72,7 @@ export default function Participant({
                 <img src="/icons/globe-128.png" width="25" className="mr-2" />
               </div>
               <a className="underline" href={websiteUrl} target="_blank">
-                {websiteUrl}
+                {removeProtocol(websiteUrl)}
               </a>
             </div>
           )}
