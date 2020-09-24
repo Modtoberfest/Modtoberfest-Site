@@ -34,6 +34,10 @@ export default function Details({ className }) {
           Discord
         </a>{" "}
         -{" "}
+        <Link href="/tips">
+          <a className="underline">Tips</a>
+        </Link>{" "}
+        -{" "}
         <Link href="/participants">
           <a className="underline">Sponsors</a>
         </Link>
