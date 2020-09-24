@@ -1,5 +1,4 @@
 import React from "react";
-import PreEvent from "./PreEvent";
 import PostEvent from "./PostEvent";
 import Link from "next/link";
 import { getEventStage } from "../../../lib/stage";
@@ -10,10 +9,6 @@ import LoginLink from "../../../components/LoginLink";
 export default function MainSection() {
   const stage = getEventStage();
   const [session] = useSession();
-
-  if (stage == "pre") {
-    return <PreEvent />;
-  }
 
   if (stage == "post") {
     return <PostEvent />;
