@@ -16,8 +16,11 @@ function IndexPage() {
       title="Modtoberfest"
       description="Support the Open Source Minecraft modding community and get prizes"
       canonical="/"
+      className="flex flex-col"
     >
-      <MainSection />
+      <div className="flex-grow flex items-center justify-center">
+        <MainSection />
+      </div>
       <Details className="mt-4" />
     </Layout>
   );

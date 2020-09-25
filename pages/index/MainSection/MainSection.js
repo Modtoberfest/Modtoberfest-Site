@@ -15,31 +15,24 @@ export default function MainSection() {
   }
 
   return (
-    <>
-      <div className="flex flex-col items-center text-center">
-        <img
-          src="/logo/half-top.png"
-          alt="logo"
-          className="mb-6"
-          width="500px"
-        />
-        <h1 className="mb-4 font-brand">
-          Support the Open Source Minecraft modding community
-          <br />
-          <span className="font-bold text-warm-l-orange">
-            and get exclusive stickers!
-          </span>
-        </h1>
-        <Button size="xl">
-          {session ? (
-            <Link href="/progress">My progress</Link>
-          ) : (
-            <LoginLink className="no-underline">
-              Login with Github to get started!
-            </LoginLink>
-          )}
-        </Button>
-      </div>
-    </>
+    <div className="flex flex-col items-center text-center">
+      <img src="/logo/half-top.png" alt="logo" className="mb-6" width="500px" />
+      <h1 className="mb-4 font-brand">
+        Support the Open Source Minecraft modding community
+        <br />
+        <span className="font-bold text-warm-l-orange">
+          and get exclusive stickers!
+        </span>
+      </h1>
+      <Button size="xl">
+        {session ? (
+          <Link href="/progress">My progress</Link>
+        ) : (
+          <LoginLink className="no-underline">
+            Login with Github to get started!
+          </LoginLink>
+        )}
+      </Button>
+    </div>
   );
 }
