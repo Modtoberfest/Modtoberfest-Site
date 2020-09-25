@@ -23,7 +23,10 @@ export default function FAQ() {
         <FAQItem title="What is Modtoberfest?">
           Modtoberfest is a celebration of Open Source in the Minecraft
           community. During October we are challenging members of our community
-          to contribute to various community projects by submitting pull
+          to contribute to various{" "}
+          <Link href="/repositories">
+            <a>community projects</a>
+          </Link>{" "}by submitting pull
           requests. Those who complete our challenge will be eligible for a free
           sticker pack! You can{" "}
           <LoginLink>
@@ -49,8 +52,10 @@ export default function FAQ() {
         <FAQItem title="What is the Modtoberfest challenge?">
           We are challenging community members to participate in the Open Source
           modding community. To complete our challenge you must submit a pull
-          request to four different projects on our list of participating
-          projects. See our{" "}
+          request to four different projects on our{" "}
+          <Link href="/repositories">
+            <a>list of participating projects.</a>
+          </Link>{" "}See our{" "}
           <Link href="/rules">
             <a>rules</a>
           </Link>{" "}

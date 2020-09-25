@@ -19,12 +19,16 @@ export default function Rules() {
           <li>You must sign up before the end of October 2020.</li>
           <li>Pull requests must be made during October 2020.</li>
           <li>
-            Only pull requests against GitHub repositories on our participating
-            projects list count towards your progress in the challenge.
+            Only pull requests against GitHub repositories on our{" "}
+          <Link href="/repositories">
+            <a>participating projects list</a>
+          </Link>{" "}count towards your progress in the challenge.
           </li>
           <li>
             You must submit pull requests to four{" "}
-            <span className="underline">different</span> repositories.
+          <Link href="/repositories">
+            <a>different</a>
+          </Link>{" "} repositories.
           </li>
           <li>Pull requests must meet our quality standards.</li>
           <li>
