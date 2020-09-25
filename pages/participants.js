@@ -1,9 +1,8 @@
 import React from "react";
 import Layout from "../components/Layout";
 import PageTitle from "../components/shared/PageTitle";
-import knex from "../lib/knex";
-import { getEventStage } from "../lib/stage";
 import Participant from "../components/Participant";
+import { fetchJson } from "../lib/api";
 
 export default function Participants({ sponsors }) {
   return (
@@ -38,17 +37,7 @@ export default function Participants({ sponsors }) {
 }
 
 export async function getServerSideProps(context) {
-  const sponsors = await knex.table("sponsor").select().orderByRaw("RANDOM()");
-
-  if (getEventStage() === "pre") {
-    sponsors.push({
-      name: "More coming soon!",
-      github_user: "Modtoberfest",
-      website_url: "https://modtoberfest.com/faq",
-    });
-  }
-
   return {
-    props: { sponsors },
+    props: { sponsors: await fetchJson("participants") },
   };
 }

@@ -1,8 +1,8 @@
 import React from "react";
 import Layout from "../components/Layout";
 import PageTitle from "../components/shared/PageTitle";
-import knex from "../lib/knex";
 import Repository from "../components/Repository";
+import { fetchJson } from "../lib/api";
 
 export default function Repositories({ repositories }) {
   return (
@@ -38,19 +38,7 @@ export default function Repositories({ repositories }) {
 }
 
 export async function getServerSideProps(context) {
-  const repositories = await knex
-    .table("repository")
-    .select(
-      "repository.name as repository_name",
-      "repository.description",
-      "repository.url",
-      "sponsor.name as sponsor_name",
-      "sponsor.id as sponsor_id"
-    )
-    .join("sponsor", "sponsor.id", "repository.sponsor_id")
-    .orderByRaw("RANDOM()");
-
   return {
-    props: { repositories },
+    props: { repositories: await fetchJson("repositories") },
   };
 }
