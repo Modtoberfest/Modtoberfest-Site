@@ -15,14 +15,14 @@ export default function Participant({
   return (
     <div className="w-full lg:w-1/2 p-2">
       <div className="h-full p-2 flex flex-col sm:flex-row flex-grow md:border-0 border-b-2 border-warm-l-orange">
-        <div className="w-full md:w-1/3">
+        <div className="w-full md:w-2/5">
           <img
             src={imageUrl || "logo/badge.png"}
-            width="200"
+            width="250"
             className="px-5 mb-2 mx-auto"
           />
         </div>
-        <div className="w-full md:w-2/3">
+        <div className="w-full md:w-3/5">
           <h2 className="font-bold text-warm-l-orange tracking-wide mb-3">
             {name}
           </h2>
