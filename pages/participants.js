@@ -11,7 +11,7 @@ export default function Participants({ sponsors }) {
       title="Sponsors"
       description="Sponsors making this event possible"
       canonical="/participants"
-      className="max-w-full"
+      className="lg:w-3/4 max-w-full"
     >
       <PageTitle className="text-center">Sponsors</PageTitle>
       <p className="text-center">
@@ -38,7 +38,7 @@ export default function Participants({ sponsors }) {
 }
 
 export async function getServerSideProps(context) {
-  const sponsors = await knex.table("sponsor").select().orderBy("name", "asc");
+  const sponsors = await knex.table("sponsor").select().orderByRaw("RANDOM()");
 
   if (getEventStage() === "pre") {
     sponsors.push({

@@ -13,12 +13,16 @@ export default function Participant({
   websiteUrl,
 }) {
   return (
-    <div className="w-full lg:w-1/2 xl:w-1/3 p-2 lg:p-5">
+    <div className="w-full lg:w-1/2 p-2">
       <div className="h-full p-2 flex flex-col sm:flex-row flex-grow md:border-0 border-b-2 border-warm-l-orange">
-        <div className="w-full md:w-1/2 flex justify-center items-center">
-          <img src={imageUrl || "logo/badge.png"} className="px-5 mb-2" />
+        <div className="w-full md:w-1/3">
+          <img
+            src={imageUrl || "logo/badge.png"}
+            width="200"
+            className="px-5 mb-2 mx-auto"
+          />
         </div>
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-2/3">
           <h2 className="font-bold text-warm-l-orange tracking-wide mb-3">
             {name}
           </h2>
