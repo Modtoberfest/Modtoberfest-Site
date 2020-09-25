@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React from "react";
-import Layout from "../../components/Layout";
-import LoginLink from "../../components/LoginLink";
-import PageTitle from "../../components/shared/PageTitle";
-import FAQItem from "./FAQItem";
+import Layout from "../components/Layout";
+import LoginLink from "../components/LoginLink";
+import PageTitle from "../components/shared/PageTitle";
+import FAQItem from "../components/FAQItem";
 
 export default function FAQ() {
   return (

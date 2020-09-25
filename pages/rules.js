@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import Layout from "../../components/Layout";
-import PageTitle from "../../components/shared/PageTitle";
+import Layout from "../components/Layout";
+import PageTitle from "../components/shared/PageTitle";
 
 export default function Rules() {
   return (

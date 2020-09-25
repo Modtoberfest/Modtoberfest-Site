@@ -1,11 +1,11 @@
 import { getSession, useSession } from "next-auth/client";
 import Link from "next/link";
 import React from "react";
-import Layout from "../../components/Layout";
-import { getAccountFromSession } from "../../lib/user";
-import knex from "../../lib/knex";
-import PageTitle from "../../components/shared/PageTitle";
-import { info } from "../../lib/discord-notifier";
+import Layout from "../components/Layout";
+import { getAccountFromSession } from "../lib/user";
+import knex from "../lib/knex";
+import PageTitle from "../components/shared/PageTitle";
+import { info } from "../lib/discord-notifier";
 
 export default function New() {
   const [session, loading] = useSession();

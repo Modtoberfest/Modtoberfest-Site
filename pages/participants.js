@@ -1,9 +1,9 @@
 import React from "react";
-import Layout from "../../components/Layout";
-import PageTitle from "../../components/shared/PageTitle";
-import knex from "../../lib/knex";
-import { getEventStage } from "../../lib/stage";
-import Participant from "./Participant";
+import Layout from "../components/Layout";
+import PageTitle from "../components/shared/PageTitle";
+import knex from "../lib/knex";
+import { getEventStage } from "../lib/stage";
+import Participant from "../components/Participant";
 
 export default function Participants({ sponsors }) {
   return (

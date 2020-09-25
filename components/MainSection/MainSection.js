@@ -1,10 +1,10 @@
 import React from "react";
 import PostEvent from "./PostEvent";
 import Link from "next/link";
-import { getEventStage } from "../../../lib/stage";
-import Button from "../../../components/shared/Button";
+import { getEventStage } from "../../lib/stage";
+import Button from "../shared/Button";
 import { useSession } from "next-auth/client";
-import LoginLink from "../../../components/LoginLink";
+import LoginLink from "../LoginLink";
 
 export default function MainSection() {
   const stage = getEventStage();

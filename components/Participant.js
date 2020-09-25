@@ -1,5 +1,5 @@
 import React from "react";
-import { removeProtocol } from "../../common/format";
+import { removeProtocol } from "../common/format";
 
 export default function Participant({
   githubUser,

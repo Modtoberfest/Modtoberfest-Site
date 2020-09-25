@@ -1,8 +1,8 @@
 import React from "react";
-import Layout from "../../components/Layout";
-import PageTitle from "../../components/shared/PageTitle";
-import knex from "../../lib/knex";
-import Repository from "./Repository";
+import Layout from "../components/Layout";
+import PageTitle from "../components/shared/PageTitle";
+import knex from "../lib/knex";
+import Repository from "../components/Repository";
 
 export default function Repositories({ repositories }) {
   return (
