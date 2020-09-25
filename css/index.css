@@ -40,4 +40,5 @@ main {
 
 a {
   overflow-wrap: anywhere;
+  @apply underline;
 }

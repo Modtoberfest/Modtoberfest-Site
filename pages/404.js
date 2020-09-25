@@ -13,7 +13,7 @@ export default function Page404() {
       <div className="text-center">
         <h1 className="mb-5">404 - This page doesn't exist</h1>
         <Link href="/">
-          <a className="underline">
+          <a>
             <h2>Go home</h2>
           </a>
         </Link>

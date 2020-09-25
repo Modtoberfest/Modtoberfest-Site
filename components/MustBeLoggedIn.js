@@ -13,7 +13,9 @@ export default function MustBeLoggedIn() {
       <div className="text-center">
         <h1 className="mb-5">You have to login to access this page</h1>
         <Button size="xl">
-          <LoginLink>Login with Github to get started!</LoginLink>
+          <LoginLink className="no-underline">
+            Login with Github to get started!
+          </LoginLink>
         </Button>
       </div>
     </Layout>

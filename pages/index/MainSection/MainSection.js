@@ -34,7 +34,9 @@ export default function MainSection() {
           {session ? (
             <Link href="/progress">My progress</Link>
           ) : (
-            <LoginLink>Login with Github to get started!</LoginLink>
+            <LoginLink className="no-underline">
+              Login with Github to get started!
+            </LoginLink>
           )}
         </Button>
       </div>

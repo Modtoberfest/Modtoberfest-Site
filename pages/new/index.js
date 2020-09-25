@@ -20,7 +20,7 @@ export default function New() {
           </h1>
           <p>
             <Link href="/">
-              <a className="underline text-xl hover:text-white">Back home</a>
+              <a className="text-xl hover:text-white">Back home</a>
             </Link>
           </p>
         </div>
@@ -40,22 +40,18 @@ export default function New() {
             <li>
               - Read the{" "}
               <Link href="/rules">
-                <a className="underline">rules</a>
+                <a>rules</a>
               </Link>
             </li>
             <li>
               - Checkout the{" "}
               <Link href="/faq">
-                <a className="underline">FAQ</a>
+                <a>FAQ</a>
               </Link>
             </li>
             <li>
               - For questions, issues or just chatting, join us on{" "}
-              <a
-                className="underline"
-                target="_blank"
-                href="https://discord.modtoberfest.com"
-              >
+              <a target="_blank" href="https://discord.modtoberfest.com">
                 Discord
               </a>
             </li>

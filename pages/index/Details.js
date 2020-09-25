@@ -17,29 +17,25 @@ export default function Details({ className }) {
       <p>
         Make 4 pull request to unique{" "}
         <Link href="/repositories">
-          <a className="underline font-bold">Sponsors repositories</a>
+          <a className="font-bold">Sponsors repositories</a>
         </Link>
       </p>
 
       <h2 className={titleClasses}>
         <Link href="/faq">
-          <a className="underline">FAQ</a>
+          <a>FAQ</a>
         </Link>{" "}
         -{" "}
         <Link href="/rules">
-          <a className="underline">Rules</a>
+          <a>Rules</a>
         </Link>{" "}
-        -{" "}
-        <a className="underline" href="https://discord.modtoberfest.com">
-          Discord
-        </a>{" "}
-        -{" "}
+        - <a href="https://discord.modtoberfest.com">Discord</a> -{" "}
         <Link href="/tips">
-          <a className="underline">Tips</a>
+          <a>Tips</a>
         </Link>{" "}
         -{" "}
         <Link href="/participants">
-          <a className="underline">Sponsors</a>
+          <a>Sponsors</a>
         </Link>
       </h2>
     </div>

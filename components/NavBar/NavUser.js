@@ -23,7 +23,7 @@ export default function NavUser({ className }) {
           Sign out
         </a>
         <Link href="/progress">
-          <a>
+          <a className="no-underline">
             <Button className="flex items-center">
               <img
                 src={session.user.image}

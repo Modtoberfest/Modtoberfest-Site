@@ -19,11 +19,11 @@ export default function Repository({
         <h3 className="pb-3">
           Sponsored by{" "}
           <Link href={`/participant/${sponsor_id}`}>
-            <a className="underline">{sponsor_name}</a>
+            <a>{sponsor_name}</a>
           </Link>
         </h3>
         <p>{description}</p>
-        <a href={url} className="underline" target="_blank">
+        <a href={url} target="_blank">
           {url}
         </a>
       </div>

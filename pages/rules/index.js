@@ -10,7 +10,7 @@ export default function Rules() {
       <p>
         See the{" "}
         <Link href="/faq">
-          <a className="underline font-bold">FAQ</a>
+          <a className="font-bold">FAQ</a>
         </Link>
       </p>
       <div className="rules">
@@ -31,13 +31,13 @@ export default function Rules() {
             Rewards and prizes for completing the challenge are limited to one
             per person.
           </li>
-          <br/>
+          <br />
           <p>
             In addition to these rules, any attempt to abuse, impede, disrupt,
             tamper, hack, or meddle in this event will disqualify you from
             participating.
           </p>
-          <br/>
+          <br />
           <h3 className="font-bold tracking-wider mb-2 mt-5">
             Quality Control
           </h3>
@@ -56,7 +56,7 @@ export default function Rules() {
           </ul>
           <p>
             Additionally any project maintainer may mark your pull request with
-            the invalid label which will automatically disqualify that pull 
+            the invalid label which will automatically disqualify that pull
             request from our systems.
           </p>
         </ol>

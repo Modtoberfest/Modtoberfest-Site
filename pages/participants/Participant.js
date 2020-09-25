@@ -28,7 +28,7 @@ export default function Participant({
               <div>
                 <img src="/icons/discord.png" width="25" className="mr-2" />
               </div>
-              <a className="underline" href={discord} target="_blank">
+              <a href={discord} target="_blank">
                 {removeProtocol(discord)}
               </a>
             </div>
@@ -43,7 +43,6 @@ export default function Participant({
                 />
               </div>
               <a
-                className="underline"
                 style={{ overflowWrap: "anywhere" }}
                 href={`https://github.com/${githubUser}`}
                 target="_blank"
@@ -57,11 +56,7 @@ export default function Participant({
               <div>
                 <img src="/icons/reddit.png" width="25" className="mr-2" />
               </div>
-              <a
-                className="underline"
-                href={`https://reddit.com/r/${subreddit}`}
-                target="_blank"
-              >
+              <a href={`https://reddit.com/r/${subreddit}`} target="_blank">
                 r/{subreddit}
               </a>
             </div>
@@ -71,7 +66,7 @@ export default function Participant({
               <div>
                 <img src="/icons/globe-128.png" width="25" className="mr-2" />
               </div>
-              <a className="underline" href={websiteUrl} target="_blank">
+              <a href={websiteUrl} target="_blank">
                 {removeProtocol(websiteUrl)}
               </a>
             </div>
@@ -85,11 +80,7 @@ export default function Participant({
                   className="mr-2"
                 />
               </div>
-              <a
-                className="underline"
-                href={`https://twitter.com/${twitterHandle}`}
-                target="_blank"
-              >
+              <a href={`https://twitter.com/${twitterHandle}`} target="_blank">
                 {twitterHandle}
               </a>
             </div>
