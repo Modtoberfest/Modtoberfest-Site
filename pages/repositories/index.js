@@ -14,14 +14,21 @@ export default function Repositories({ repositories }) {
     >
       <PageTitle className="text-center">Repositories</PageTitle>
       <p className="text-center">
-        Contribute to these repositories to complete the Modtoberfest challenge
+        Contribute to these repositories to complete the Modtoberfest challenge!
       </p>
       {repositories.length === 0 ? (
         <div>Coming soon!</div>
       ) : (
         <div className="flex flex-wrap">
           {repositories.map((repo) => (
-            <Repository {...repo} key={repo.repository_name} />
+            <Repository
+              description={repo.description}
+              repositoryName={repo.repository_name}
+              sponsorId={repo.sponsorId}
+              sponsorName={repo.sponsor_name}
+              url={repo.url}
+              key={repo.repository_name}
+            />
           ))}
         </div>
       )}
