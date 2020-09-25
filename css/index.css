@@ -17,7 +17,11 @@ body {
 }
 
 nav {
-  @apply flex items-center justify-between flex-wrap px-5 py-3 bg-gradient-to-b from-teal-light to-teal-dark;
+  @apply px-5 py-3 bg-gradient-to-b from-teal-light to-teal-dark flex items-center justify-center;
+}
+
+nav .nav-content {
+  @apply flex items-center justify-between flex-wrap max-w-6xl w-full;
 }
 
 main {
