@@ -13,9 +13,10 @@ export default function Repositories({ repositories }) {
       className="max-w-full"
     >
       <PageTitle className="text-center">Repositories</PageTitle>
-      <p className="text-center">
-        Contribute to these repositories to complete the Modtoberfest challenge!
-      </p>
+      <div className="text-center my-2">
+        There are {repositories.length} repositories to contribute to, pick one
+        and get started!
+      </div>
       {repositories.length === 0 ? (
         <div>Coming soon!</div>
       ) : (
@@ -47,7 +48,7 @@ export async function getServerSideProps(context) {
       "sponsor.id as sponsor_id"
     )
     .join("sponsor", "sponsor.id", "repository.sponsor_id")
-    .orderBy("repository.name");
+    .orderByRaw("RANDOM()");
 
   return {
     props: { repositories },

@@ -14,9 +14,9 @@ export default function Participants({ sponsors }) {
       className="lg:w-3/4 max-w-full"
     >
       <PageTitle className="text-center">Sponsors</PageTitle>
-      <p className="text-center">
+      <div className="text-center my-2">
         Thank you to our sponsors for making this event possible!
-      </p>
+      </div>
       <div className="flex flex-wrap">
         {sponsors.map((sponsor) => (
           <Participant
