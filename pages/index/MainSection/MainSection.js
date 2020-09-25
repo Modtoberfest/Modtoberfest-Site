@@ -26,11 +26,13 @@ export default function MainSection() {
       </h1>
       <Button size="xl">
         {session ? (
-          <Link href="/progress">My progress</Link>
+          <Link href="/progress">
+            <a className="no-underline">My progress</a>
+          </Link>
         ) : (
-          <LoginLink className="no-underline">
-            Login with Github to get started!
-          </LoginLink>
+          <>
+            <LoginLink className="no-underline">Get started!</LoginLink>
+          </>
         )}
       </Button>
     </div>
