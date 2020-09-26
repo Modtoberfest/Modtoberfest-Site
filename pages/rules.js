@@ -20,15 +20,16 @@ export default function Rules() {
           <li>Pull requests must be made during October 2020.</li>
           <li>
             Only pull requests against GitHub repositories on our{" "}
-          <Link href="/repositories">
-            <a>participating projects list</a>
-          </Link>{" "}count towards your progress in the challenge.
+            <Link href="/repositories">
+              <a>participating projects list</a>
+            </Link>{" "}
+            count towards your progress in the challenge.
           </li>
           <li>
             You must submit pull requests to four{" "}
-          <Link href="/repositories">
-            <a>different</a>
-          </Link>{" "} repositories.
+            <Link href="/repositories">
+              <a>different repositories</a>
+            </Link>
           </li>
           <li>Pull requests must meet our quality standards.</li>
           <li>
