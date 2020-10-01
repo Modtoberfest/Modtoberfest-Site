@@ -1,11 +1,14 @@
 import React from "react";
-import { useSession } from "next-auth/client";
+import { getSession, useSession } from "next-auth/client";
 import Layout from "../components/Layout";
 import { getEventStage } from "../lib/stage";
 import PageTitle from "../components/shared/PageTitle";
 import MustBeLoggedIn from "../components/MustBeLoggedIn";
+import { fetchJson } from "../lib/api";
+import { getAccountFromSession } from "../lib/user";
+import { info } from "../lib/discord-notifier";
 
-export default function Progress() {
+export default function Progress({ count }) {
   const stage = getEventStage();
   const [session] = useSession();
 
@@ -35,21 +38,63 @@ export default function Progress() {
         </div>
       </PageTitle>
       <div>
-        <div className="bg-warm-red rounded-lg p-4 text-center mb-5">
-          <h2 className="font-bold">
-            Notice: your contributions won't show up instantly.
-            <br />
-            Don't worry! They are still accounted for.
-          </h2>
+        <div className="text-center my-10">
+          {count >= 4 && (
+            <div>
+              <h1 className="mb-5">
+                <span className="font-bold">Congratulations!</span>
+                <br />
+                You completed the Modtoberfest challenge!
+              </h1>
+              <p className="text-xl mb-5">
+                You will be able to claim your reward shortly.
+                <br /> Make sure you join our{" "}
+                <a href="https://discord.modtoberfest.com/" target="_blank">
+                  discord
+                </a>{" "}
+                to stay up to date or come back later!
+              </p>
+            </div>
+          )}
+          <h1 className="text-center bg-warm-red mb-2 rounded-lg p-5">
+            Contributions: <span className="font-bold">{count} / 4</span>
+          </h1>
+          {count === 1 && <h2>3 to go!</h2>}
+          {count === 2 && <h2>Only 2 left!</h2>}
+          {count === 3 && <h2>1 left, so close!</h2>}
+          {count < 4 && (
+            <div className="text-center mt-5">
+              <h2>
+                Notice: your contributions won't show up instantly.
+                <br />
+                Don't worry! They are still accounted for.
+              </h2>
+            </div>
+          )}
         </div>
-        <h1>
-          Contributions: <span className="font-bold">0 / 4</span>
-        </h1>
       </div>
     </Layout>
   );
 }
 
-export async function getServerSideProps() {
-  return { props: {} };
+export async function getServerSideProps(context) {
+  const session = await getSession(context);
+
+  if (!session) {
+    return { props: { count: 0 } };
+  }
+
+  const account = await getAccountFromSession(session.accessToken);
+
+  const count = await fetchJson(`users/${account.participant_id}/progress`);
+
+  if (count === 4) {
+    await info(`${account.name} completed 4 PRs!`, null, [
+      {
+        name: "Participant ID",
+        value: account.participant_id,
+      },
+    ]);
+  }
+  return { props: { count: count.unique } };
 }
