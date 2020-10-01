@@ -18,6 +18,14 @@ export default function FAQ() {
         <Link href="/rules">
           <a className="font-bold">rules</a>
         </Link>
+        .
+      </p>
+      <p>
+        See the{" "}
+        <Link href="/repositories">
+          <a className="font-bold">repositories to contribute to</a>
+        </Link>
+        .
       </p>
       <div className="faq">
         <FAQItem title="What is Modtoberfest?">
@@ -26,9 +34,9 @@ export default function FAQ() {
           to contribute to various{" "}
           <Link href="/repositories">
             <a>community projects</a>
-          </Link>{" "}by submitting pull
-          requests. Those who complete our challenge will be eligible for a free
-          sticker pack! You can{" "}
+          </Link>{" "}
+          by submitting pull requests. Those who complete our challenge will be
+          eligible for a free sticker pack! You can{" "}
           <LoginLink>
             <a>sign up</a>
           </LoginLink>{" "}
@@ -55,7 +63,8 @@ export default function FAQ() {
           request to four different projects on our{" "}
           <Link href="/repositories">
             <a>list of participating projects.</a>
-          </Link>{" "}See our{" "}
+          </Link>{" "}
+          See our{" "}
           <Link href="/rules">
             <a>rules</a>
           </Link>{" "}
