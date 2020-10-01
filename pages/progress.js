@@ -65,7 +65,7 @@ export default function Progress({ count }) {
           {count < 4 && (
             <div className="text-center mt-5">
               <h2>
-                Notice: your contributions won't show up instantly.
+                Notice: Your contributions won't show up instantly.
                 <br />
                 Don't worry! They are still accounted for.
               </h2>
