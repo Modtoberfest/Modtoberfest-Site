@@ -14,11 +14,13 @@ exports.up = function (knex) {
       t.foreign("pr_id").references("pullrequest.id");
       t.uuid("participant_id").notNullable();
       t.foreign("participant_id").references("participant.id");
+      t.uuid("repo_id").notNullable();
+      t.foreign("repo_id").references("repository.id");
       t.boolean("valid").defaultTo(true);
       t.primary(["pr_id", "participant_id"]);
     });
 };
 
 exports.down = function (knex) {
-  //   return knex.schema.dropTable("pullrequest");
+  //   return knex.schema.dropTable("contribution").dropTable("pullrequest");
 };
