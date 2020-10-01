@@ -35,11 +35,16 @@ export default function Progress() {
         </div>
       </PageTitle>
       <div>
-        {stage == "pre" && (
-          <p className="text-xl">
-            The event hasn't started yet! Come back on October 1st 2020!
-          </p>
-        )}
+        <div className="bg-warm-red rounded-lg p-4 text-center mb-5">
+          <h2 className="font-bold">
+            Notice: your contributions won't show up instantly.
+            <br />
+            Don't worry! They are still accounted for.
+          </h2>
+        </div>
+        <h1>
+          Contributions: <span className="font-bold">0 / 4</span>
+        </h1>
       </div>
     </Layout>
   );
