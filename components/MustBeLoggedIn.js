@@ -12,11 +12,11 @@ export default function MustBeLoggedIn() {
       <img src="/logo/half-top.png" width="400" className="mb-5" />
       <div className="text-center">
         <h1 className="mb-5">You have to login to access this page</h1>
-        <Button size="xl">
-          <LoginLink className="no-underline">
+        <LoginLink className="no-underline">
+          <Button size="xl">
             Login with Github to get started!
-          </LoginLink>
-        </Button>
+          </Button>
+        </LoginLink>
       </div>
     </Layout>
   );
