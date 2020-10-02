@@ -12,7 +12,7 @@ export default function NavBar() {
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <Link href="/">
             <a>
-              <img src="/logo/badge.png" width="80px" />
+              <img src="/logo/badge.png" width="80px" alt="logo"/>
             </a>
           </Link>
         </div>

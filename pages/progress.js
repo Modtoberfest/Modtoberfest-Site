@@ -32,6 +32,7 @@ export default function Progress({ count }) {
               src={user.image}
               width="50"
               className="rounded-full mr-3 mb-2"
+              alt="avatar"
             />
             {user.name}
           </div>
