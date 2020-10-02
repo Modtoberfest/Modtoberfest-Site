@@ -24,17 +24,17 @@ export default function MainSection() {
           and get exclusive stickers!
         </span>
       </h1>
-      <Button size="xl">
-        {session ? (
-          <Link href="/progress">
-            <a className="no-underline">My progress</a>
-          </Link>
-        ) : (
-          <>
-            <LoginLink className="no-underline">Get started!</LoginLink>
-          </>
-        )}
-      </Button>
+      {session ? (
+        <Link href="/progress">
+          <a className="no-underline">
+            <Button size="xl">My progress</Button>
+          </a>
+        </Link>
+      ) : (
+        <LoginLink className="no-underline">
+          <Button size="xl">Get started!</Button>
+        </LoginLink>
+      )}
     </div>
   );
 }
