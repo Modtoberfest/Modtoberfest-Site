@@ -88,13 +88,5 @@ export async function getServerSideProps(context) {
 
   const count = await fetchJson(`users/${account.participant_id}/progress`);
 
-  if (count === 4) {
-    await info(`${account.name} completed 4 PRs!`, null, [
-      {
-        name: "Participant ID",
-        value: account.participant_id,
-      },
-    ]);
-  }
   return { props: { count: count.unique } };
 }
