@@ -37,8 +37,9 @@ export default function Repositories({ repositories }) {
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   return {
     props: { repositories: await fetchJson("repositories") },
+    revalidate: 60
   };
 }
