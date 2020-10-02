@@ -65,7 +65,11 @@ export default function Progress({ count }) {
           {count < 4 && (
             <div className="text-center mt-5">
               <h2>
+<<<<<<< HEAD
                 Notice: your contributions won't show up instantly.
+=======
+                Notice: Your contributions won't show up instantly.
+>>>>>>> 242dbb785b77d7750597bb1ae7de79d0ce92d316
                 <br />
                 Don't worry! They are still accounted for.
               </h2>
@@ -88,5 +92,16 @@ export async function getServerSideProps(context) {
 
   const count = await fetchJson(`users/${account.participant_id}/progress`);
 
+<<<<<<< HEAD
+=======
+  if (count === 4) {
+    await info(`${account.name} completed 4 PRs!`, null, [
+      {
+        name: "Participant ID",
+        value: account.participant_id,
+      },
+    ]);
+  }
+>>>>>>> 242dbb785b77d7750597bb1ae7de79d0ce92d316
   return { props: { count: count.unique } };
 }
