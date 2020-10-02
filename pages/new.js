@@ -62,7 +62,7 @@ export default function New() {
             <p>Get modding and have fun!</p>
             <p className="text-sm">- the Modtoberfest team</p>
           </div>
-          <img src="/logo/half-bottom.png" width="400"></img>
+          <img src="/logo/half-bottom.png" width="400" alt="logo"></img>
         </div>
       </div>
     </Layout>

@@ -20,6 +20,7 @@ export default function Participant({
             src={imageUrl || "logo/badge.png"}
             width="250"
             className="px-5 mb-2 mx-auto"
+            alt="avatar"
           />
         </div>
         <div className="w-full md:w-3/5">
@@ -30,7 +31,7 @@ export default function Participant({
           {discord && (
             <div className="my-3 flex flex-no-wrap">
               <div>
-                <img src="/icons/discord.png" width="25" className="mr-2" />
+                <img src="/icons/discord.png" width="25" className="mr-2" alt="discord"/>
               </div>
               <a href={discord} target="_blank">
                 {removeProtocol(discord)}
@@ -44,6 +45,7 @@ export default function Participant({
                   src="/icons/github-logo-128.png"
                   width="25"
                   className="mr-2"
+                  alt="github"
                 />
               </div>
               <a
@@ -58,7 +60,7 @@ export default function Participant({
           {subreddit && (
             <div className="my-3 flex flex-no-wrap">
               <div>
-                <img src="/icons/reddit.png" width="25" className="mr-2" />
+                <img src="/icons/reddit.png" width="25" className="mr-2" alt="reddit"/>
               </div>
               <a href={`https://reddit.com/r/${subreddit}`} target="_blank">
                 r/{subreddit}
@@ -68,7 +70,7 @@ export default function Participant({
           {websiteUrl && (
             <div className="my-3 flex flex-no-wrap">
               <div>
-                <img src="/icons/globe-128.png" width="25" className="mr-2" />
+                <img src="/icons/globe-128.png" width="25" className="mr-2" alt="website"/>
               </div>
               <a href={websiteUrl} target="_blank">
                 {removeProtocol(websiteUrl)}
@@ -82,6 +84,7 @@ export default function Participant({
                   src="/icons/twitter-logo-128.png"
                   width="25"
                   className="mr-2"
+                  alt="twitter"
                 />
               </div>
               <a href={`https://twitter.com/${twitterHandle}`} target="_blank">

@@ -29,6 +29,7 @@ export default function NavUser({ className }) {
                 src={session.user.image}
                 width="30"
                 className="rounded-full mr-3"
+                alt="avatar"
               />
               <div>My progress</div>
             </Button>

@@ -22,6 +22,7 @@ export default function Repository({
                 src="/icons/github-logo-128.png"
                 width="25"
                 className="mr-2"
+                alt="github"
               />
             </div>
             <a className="font-bold" href={url} target="_blank">
