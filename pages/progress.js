@@ -7,8 +7,9 @@ import MustBeLoggedIn from "../components/MustBeLoggedIn";
 import { fetchJson } from "../lib/api";
 import { getAccountFromSession } from "../lib/user";
 import { info } from "../lib/discord-notifier";
+import PullRequest from "../components/PullRequest";
 
-export default function Progress({ count }) {
+export default function Progress({ count, prs }) {
   const stage = getEventStage();
   const [session] = useSession();
 
@@ -63,6 +64,14 @@ export default function Progress({ count }) {
           {count === 1 && <h2>3 to go!</h2>}
           {count === 2 && <h2>Only 2 left!</h2>}
           {count === 3 && <h2>1 left, so close!</h2>}
+          {prs.map((pr) => (
+            <PullRequest
+              repositoryName={pr.repository_name}
+              sponsorName={pr.sponsor_name}
+              url={pr.url}
+              key={pr.pr_id}
+            />
+          ))}
           {count < 4 && (
             <div className="text-center mt-5">
               <h2>
@@ -87,7 +96,7 @@ export async function getServerSideProps(context) {
 
   const account = await getAccountFromSession(session.accessToken);
 
-  const count = await fetchJson(`users/${account.participant_id}/progress`);
+  const data = await fetchJson(`users/${account.participant_id}/progress`);
 
-  return { props: { count: count.unique } };
+  return { props: { count: data.unique, prs: data.prs } };
 }
