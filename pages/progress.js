@@ -6,7 +6,7 @@ import PageTitle from "../components/shared/PageTitle";
 import MustBeLoggedIn from "../components/MustBeLoggedIn";
 import { fetchJson } from "../lib/api";
 import { getAccountFromSession } from "../lib/user";
-import PullRequest from "../components/PullRequest";
+import PullRequest from "../components/Progress/PullRequest";
 import ChallengeComplete from "../components/Progress/ChallengeComplete";
 import TrackingNotice from "../components/Progress/TrackingNotice";
 import ErrorPage from "../components/ErrorPage";
@@ -32,7 +32,7 @@ export default function Progress({ count, prs, error }) {
       canonical="/progress"
     >
       <PageTitle>
-        <div className="flex">
+        <div className="flex flex-wrap">
           <div className="flex-grow">Progress</div>
           <div className="flex">
             <img
@@ -45,22 +45,41 @@ export default function Progress({ count, prs, error }) {
           </div>
         </div>
       </PageTitle>
-      <div className="text-center my-10">
-        {count >= 4 && <ChallengeComplete />}
-        <h1 className="text-center bg-warm-red mb-2 rounded-lg p-5">
-          Contributions: <span className="font-bold">{count} / 4</span>
-        </h1>
-        {count === 1 && <h2>3 to go!</h2>}
-        {count === 2 && <h2>Only 2 left!</h2>}
-        {count === 3 && <h2>1 left, so close!</h2>}
+      <div className="my-10">
+        <div className="text-center">
+          {count >= 4 && <ChallengeComplete />}
+          <h1 className="text-center bg-warm-red mb-2 rounded-lg p-5">
+            Contributions: <span className="font-bold">{count} / 4</span>
+          </h1>
+          {count === 1 && (
+            <h2>
+              <span className="font-bold">3</span> to go!
+            </h2>
+          )}
+          {count === 2 && (
+            <h2>
+              Only <span className="font-bold">2</span> left!
+            </h2>
+          )}
+          {count === 3 && (
+            <h2>
+              <span className="font-bold">1</span> left, so close!
+            </h2>
+          )}
+        </div>
+        <h2 className="mt-10 mb-5 text-2xl">Repositories you contributed to</h2>
         {prs.map((pr) => (
-          <PullRequest
-            repositoryName={pr.repository_name}
-            sponsorName={pr.sponsor_name}
-            url={pr.url}
-            key={pr.pr_id}
-          />
+          <>
+            <hr />
+            <PullRequest
+              repositoryName={pr.repository_name}
+              sponsorName={pr.sponsor_name}
+              url={pr.url}
+              key={pr.pr_id}
+            />
+          </>
         ))}
+        <hr />
         {count < 4 && <TrackingNotice />}
       </div>
     </Layout>
