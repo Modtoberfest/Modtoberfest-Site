@@ -46,7 +46,7 @@ export default function NavBar() {
             <NavLink href="/rules">Rules</NavLink>
             <NavLink href="/repositories">Repositories</NavLink>
             <NavLink href="/tips">Tips</NavLink>
-            <NavLink href="/contact">Contact</NavLink>
+            <NavLink href="/contact">Discord</NavLink>
             <NavLink href="/participants">Sponsors</NavLink>
           </div>
           <div>
