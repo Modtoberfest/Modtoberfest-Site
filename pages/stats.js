@@ -34,10 +34,10 @@ export default function Stats({ error, stats }) {
   return (
     <Layout
       title="Statistics"
-      description="Global Modtoberfest statistics"
+      description="Modtoberfest in numbers"
       canonical="/stats"
     >
-      <PageTitle>Motoberfest in number</PageTitle>
+      <PageTitle>Modtoberfest in numbers</PageTitle>
       <div>
         <Stat value={stats.participantCount} text={"signed up"} />
         <Stat
