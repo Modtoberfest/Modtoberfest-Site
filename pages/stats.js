@@ -58,12 +58,16 @@ export default function Stats({ error, stats }) {
             </tr>
           </thead>
           <tbody className="text-xl">
-            {stats.countByUser.map((user) => {
+            {stats.countByUser.map((user, index) => {
               return (
                 <tr className="border-t">
                   <td className="py-2 md:pl-10">{user.name}</td>
                   <td className="flex items-center justify-end md:pr-10">
-                    {user.count >= 4 && <span className="mr-2">🎉</span>}
+                    {user.count >= 4 && (
+                      <span className="mr-2">
+                        {index === 0 ? <>👑</> : <>🎉</>}
+                      </span>
+                    )}
                     {user.count}
                   </td>
                 </tr>
