@@ -35,6 +35,9 @@ export default function MainSection() {
           <Button size="xl">Get started!</Button>
         </LoginLink>
       )}
+      <Link href="/stats">
+        <a className="mt-2 text-xl font-bold">Statistics and leaderboard</a>
+      </Link>
     </div>
   );
 }

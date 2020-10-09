@@ -10,6 +10,7 @@ import PullRequest from "../components/Progress/PullRequest";
 import ChallengeComplete from "../components/Progress/ChallengeComplete";
 import TrackingNotice from "../components/Progress/TrackingNotice";
 import ErrorPage from "../components/ErrorPage";
+import Link from "next/link";
 
 export default function Progress({ count, prs, error }) {
   const stage = getEventStage();
@@ -38,7 +39,7 @@ export default function Progress({ count, prs, error }) {
             <img
               src={user.image}
               width="50"
-              className="rounded-full mr-3 mb-2"
+              className="mb-2 mr-3 rounded-full"
               alt="avatar"
             />
             {user.name}
@@ -48,7 +49,7 @@ export default function Progress({ count, prs, error }) {
       <div className="my-10">
         <div className="text-center">
           {count >= 4 && <ChallengeComplete />}
-          <h1 className="text-center bg-warm-red mb-2 rounded-lg p-5">
+          <h1 className="p-5 mb-2 text-center rounded-lg bg-warm-red">
             Contributions: <span className="font-bold">{count} / 4</span>
           </h1>
           {count === 1 && (
@@ -66,6 +67,11 @@ export default function Progress({ count, prs, error }) {
               <span className="font-bold">1</span> left, so close!
             </h2>
           )}
+        </div>
+        <div className="text-center">
+          <Link href="/stats">
+            <a className="mt-2 text-xl font-bold">Statistics and leaderboard</a>
+          </Link>
         </div>
         <h2 className="mt-10 mb-5 text-2xl">Repositories you contributed to</h2>
         {prs.map((pr) => (
