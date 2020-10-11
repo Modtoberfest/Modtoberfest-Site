@@ -65,7 +65,7 @@ export default function Stats({ error, stats }) {
                   <td className="flex items-center justify-end md:pr-10">
                     {user.count >= 4 && (
                       <span className="mr-2">
-                        {index === 0 ? <>👑</> : <>🎉</>}
+                        {stats.countByUser[0].count === user.count ? <>👑</> : <>🎉</>}
                       </span>
                     )}
                     {user.count}
