@@ -45,7 +45,7 @@ export default function Stats({ error, stats }) {
           text={"pull requests"}
           alignRight
         />
-        <Stat value={stats.completed} text="completed challenge" />
+        <Stat value={stats.completed} text="completed the challenge" />
       </div>
       {/* <hr className="my-10" /> */}
       <div>
