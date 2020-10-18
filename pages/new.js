@@ -109,7 +109,7 @@ export async function getServerSideProps(context) {
         value: account.github_id,
       },
       {
-        name: "UUID",
+        name: "UID",
         value: account.id,
       },
     ]);
