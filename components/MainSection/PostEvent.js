@@ -12,9 +12,11 @@ export default function PostEventLanding() {
     <div className="flex flex-col items-center text-center">
       <img src="/logo/half-top.png" alt="logo" className="mb-6" width="500px" />
       <h1 className="mb-4 font-brand">
-        The event is over!<br />
+        The event is over, thank you for partipating!<br />
         <span className="font-bold text-warm-l-orange">
-          Thank you for participating!
+          <Link href="/claim">
+            <a>Claim your stickers</a>
+          </Link>
         </span>
       </h1>
       {session ? (

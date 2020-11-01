@@ -1,4 +1,5 @@
 import "../css/index.css";
+import "../css/form.css";
 
 import { Provider } from "next-auth/client";
 import { DefaultSeo } from "next-seo";
