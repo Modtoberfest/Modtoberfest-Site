@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
-import { getSession } from "next-auth/client";
+import { getSession, useSession } from "next-auth/client";
 import { fetchJson } from "../lib/api";
 import { getAccountFromSession } from "../lib/user";
 import { Input, Label } from "../components/Form";
 import Button from "../components/shared/Button";
+import MustBeLoggedIn from "../components/MustBeLoggedIn";
 
-function ClaimForm() {
+function ClaimForm({ onSubmit }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [address1, setAddress1] = useState("");
@@ -16,10 +17,28 @@ function ClaimForm() {
   const [state, setState] = useState("");
   const [country, setCountry] = useState("");
   const [email, setEmail] = useState("");
+  const [feedback, setFeedback] = useState("");
 
   return (
     <div className="mt-5">
-      <form>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+
+          onSubmit({
+            firstName,
+            lastName,
+            address1,
+            address2,
+            city,
+            zip,
+            state,
+            country,
+            email,
+            feedback,
+          });
+        }}
+      >
         <div className="mb-5">
           <div className="mr-5 flex flex-wrap flex-grow">
             <Label htmlFor="first_name">Email</Label>
@@ -130,6 +149,15 @@ function ClaimForm() {
             }}
           />
         </div>
+        <div className="mt-5 flex flex-wrap">
+          <Label htmlFor="feedback">Feedback</Label>
+          <textarea
+            className="w-full rounded-lg text-black p-2"
+            style={{ minHeight: 100 }}
+            onChange={(e) => setFeedback(e.target.value)}
+            value={feedback}
+          />
+        </div>
         <div className="mt-5">* required field</div>
         <div className="flex items-center justify-center">
           <Button size="xl">Claim!</Button>
@@ -140,6 +168,37 @@ function ClaimForm() {
 }
 
 export default function Claim({ count }) {
+  const [claimID, setClaimID] = useState();
+  const [session] = useSession();
+
+  useEffect(() => {
+    const checkClaim = async () => {
+      const res = await fetch("/api/claim");
+      const json = await res.json();
+      if (json.id) {
+        setClaimID(json.id);
+      }
+    };
+
+    if(session) {
+      checkClaim();
+    }
+  }, [session]);
+
+
+  if (!session) {
+    return <MustBeLoggedIn />;
+  }
+
+  const handleSubmit = async (data) => {
+    const claim = await fetch(`/api/claim`, {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+
+    setClaimID(claim.id);
+  };
+
   return (
     <Layout
       title="Claim your stickers"
@@ -150,17 +209,70 @@ export default function Claim({ count }) {
       {count < 4 && (
         <div>
           <h1>
-            Looks like you haven't completed the challenge,
-            <br />
-            come back later!
+            Looks like you haven't completed the challenge, come back next year!
           </h1>
-          <p>
-            Note: it might take up to 5 minutes for your contributions to show
-            up
-          </p>
         </div>
       )}
-      {count >= 4 && <ClaimForm />}
+      {count >= 4 && !claimID && <ClaimForm onSubmit={handleSubmit} />}
+      {claimID && (
+        <div className="text-center mt-2">
+          <h1>You claimed your Modtoberfest stickers!</h1>
+          <h1 className="font-serif font-bold tracking-wider">{claimID}</h1>
+          <div>Confirmation ID</div>
+          <h1 className="mt-5">
+            Thank you for participating in Modtoberfest, we hope you had a great
+            time!
+          </h1>
+          <h2>- The Modtoberfest team</h2>
+          <div className="flex justify-center my-3">
+            Darkhax
+            <div>
+              <a href="https://twitter.com/DarkhaxDev" target="_blank">
+                <img
+                  src="/icons/twitter-logo-128.png"
+                  width="25"
+                  className="ml-2"
+                  alt="twitter"
+                />
+              </a>
+            </div>
+          </div>
+          <div className="flex justify-center mb-3">
+            Antoine G. (Poke)
+            <div>
+              <a href={`https://twitter.com/antoineg_dev`} target="_blank">
+                <img
+                  src="/icons/twitter-logo-128.png"
+                  width="25"
+                  className="ml-2"
+                  alt="twitter"
+                />
+              </a>
+            </div>
+          </div>
+          <div className="flex justify-center">
+            Jaredlll08
+            <div>
+              <a href={`https://twitter.com/jaredlll08`} target="_blank">
+                <img
+                  src="/icons/twitter-logo-128.png"
+                  width="25"
+                  className="ml-2"
+                  alt="twitter"
+                />
+              </a>
+            </div>
+          </div>
+          <div className="flex justify-center">
+            <img
+              src="/logo/half-bottom.png"
+              width="400"
+              className="mt-5"
+              alt="logo"
+            />
+          </div>
+        </div>
+      )}
     </Layout>
   );
 }
