@@ -7,7 +7,7 @@ import { Input, Label } from "../components/Form";
 import Button from "../components/shared/Button";
 import MustBeLoggedIn from "../components/MustBeLoggedIn";
 
-function ClaimForm({ onSubmit }) {
+function ClaimForm({ onSubmit, loading }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [address1, setAddress1] = useState("");
@@ -160,7 +160,7 @@ function ClaimForm({ onSubmit }) {
         </div>
         <div className="mt-5">* required field</div>
         <div className="flex items-center justify-center">
-          <Button size="xl">Claim!</Button>
+          {loading ? <>Loading...</> : <Button size="xl">Claim!</Button>}
         </div>
       </form>
     </div>
@@ -169,6 +169,7 @@ function ClaimForm({ onSubmit }) {
 
 export default function Claim({ count }) {
   const [claimID, setClaimID] = useState();
+  const [loading, setLoading] = useState(false);
   const [session] = useSession();
 
   useEffect(() => {
@@ -191,12 +192,16 @@ export default function Claim({ count }) {
   }
 
   const handleSubmit = async (data) => {
+    setLoading(true);
     const claim = await fetch(`/api/claim`, {
       method: "POST",
       body: JSON.stringify(data),
     });
 
-    setClaimID(claim.id);
+    const json = await claim.json();
+
+    setClaimID(json.data.id);
+    setLoading(false);
   };
 
   return (
@@ -213,7 +218,7 @@ export default function Claim({ count }) {
           </h1>
         </div>
       )}
-      {count >= 4 && !claimID && <ClaimForm onSubmit={handleSubmit} />}
+      {count >= 4 && !claimID && <ClaimForm loading={loading} onSubmit={handleSubmit} />}
       {claimID && (
         <div className="text-center mt-2">
           <h1>You claimed your Modtoberfest stickers!</h1>
