@@ -108,6 +108,7 @@ function ClaimForm({ onSubmit, loading }) {
         <div className="mt-5 flex flex-wrap">
           <Label htmlFor="city">City *</Label>
           <Input
+            required
             id="city"
             value={city}
             type="text"
@@ -119,6 +120,7 @@ function ClaimForm({ onSubmit, loading }) {
         <div className="mt-5 flex flex-wrap">
           <Label htmlFor="state">State/Province</Label>
           <Input
+            required
             id="state"
             value={state}
             type="text"
@@ -130,6 +132,7 @@ function ClaimForm({ onSubmit, loading }) {
         <div className="mt-5 flex flex-wrap">
           <Label htmlFor="zip">ZIP Code *</Label>
           <Input
+            required
             id="zip"
             value={zip}
             type="text"
@@ -141,6 +144,7 @@ function ClaimForm({ onSubmit, loading }) {
         <div className="mt-5 flex flex-wrap">
           <Label htmlFor="country">Country</Label>
           <Input
+            required
             id="country"
             value={country}
             type="text"
