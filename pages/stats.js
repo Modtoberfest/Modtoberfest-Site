@@ -45,7 +45,7 @@ export default function Stats({ error, stats }) {
           text={"pull requests"}
           alignRight
         />
-        <Stat value={stats.completed} text="completed challenge" />
+        <Stat value={stats.completed} text="completed the challenge" />
       </div>
       {/* <hr className="my-10" /> */}
       <div>
@@ -61,7 +61,7 @@ export default function Stats({ error, stats }) {
             {stats.countByUser.map((user, index) => {
               return (
                 <tr className="border-t">
-                  <td className="py-2 md:pl-10">{user.name}</td>
+                  <td className="py-2 md:pl-10"><a href={user.html_url} target="_blank">{user.name}</a></td>
                   <td className="flex items-center justify-end md:pr-10">
                     {user.count >= 4 && (
                       <span className="mr-2">
