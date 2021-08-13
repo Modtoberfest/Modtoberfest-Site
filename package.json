@@ -28,7 +28,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "knex": "^0.21.5",
-    "next": "9.5.2",
+    "next": "11.1.0",
     "next-auth": "^3.1.0",
     "next-seo": "^4.7.3",
     "node-fetch": "^2.6.1",
